@@ -1,3 +1,7 @@
-import { currentWeather } from "./weatherData";
+import { fetchWeather } from "./weatherData";
 
-currentWeather("bhopal");
+async function meow(){
+    console.log(await fetchWeather("bhopal"));
+}
+meow();
+

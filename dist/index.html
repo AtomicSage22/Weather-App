@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video src="assets/rainy.mp4" autoplay loop muted></video>
+    <main>
+        <div class="weather-content">
+            <div class="glass">
+                <nav>
+                    <div class="box">
+                        <form name="search">
+                            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+                        </form>
+                        <!-- <i class="fas fa-search"></i> -->
+                        <img src="assets/search-icon.png"  alt="">
+                    </div>
+                </nav>
+                <div class="glass-info">
+                    <img src="assets/rainy.png" alt="">
+                    <p class="temp">45°C</p>
+                </div>
+            </div>
+            <div class="data">
+                <div class="primary-data">
+                    <p class="date">Thu,<br> 28 March</p>
+                    <div class="secondary-info">
+                        <p>Precipitation</p>
+                        <p>Humidity</p>
+                        <p>Wind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

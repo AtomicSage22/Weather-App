@@ -21,7 +21,7 @@ async function updateWeather(city, unit){
     console.log(data.date);
     day.textContent = `${data.day},`;
     date.textContent = data.date;
-    temperature.textContent = data.temp_c;  
+    temperature.textContent = data.temp;  
     locationCity.textContent = data.city;
     locationCountry.textContent = data.country;
     precipitation.textContent = `Precipitation: ${data.precipitation}`;
@@ -58,6 +58,13 @@ updateWeather(city, unit);
 searchForm.addEventListener("submit", (e) =>{
     e.preventDefault();
     console.log("meow")
-    updateWeather(searchBox.value, unit);
+    city = searchBox.value;
+    updateWeather(city, unit);
     searchBox.value = "";
 })
+
+temperature.addEventListener("click", () =>{
+    unit = !unit;
+    updateWeather(city, unit);
+    
+} )

@@ -16,36 +16,22 @@ export const fetchWeather = async (city, unit) =>{
             city: data.location.name,
             country: data.location.country,
             condition: data.current.condition.text,
-            temp_c: `${data.current.temp_c}°C`
+            temp: `${data.current.temp_c}°C`
         };
     }
     else{
         return {
             code: data.current.condition.code,
             day: weekDays[date.getDay()],
-            date: date.getDate(),
+            date: `${date.getDate()}  ${months[date.getMonth()]}`,
             precipitation: `${data.current.precip_in}in`,
             humidity: data.current.humidity,
             wind: `${data.current.wind_mph}mph`,
             city: data.location.name,
             country: data.location.country,
             condition: data.current.condition.text,
-            temp_f: `${data.current.temp_f}°F`
+            temp: `${data.current.temp_f}°F`
         }
     }
 }
 
-// class WeatherData{
-//     constructor(conditions, temp_c, temp_f, windspeed){
-//         this.conditions = conditions;
-//         this.temp_c = temp_c;
-//         this.temp_f = temp_f;
-//         this.windspeed = windspeed;
-//     }
-// }
-
-// export const currentWeather = async (city) =>{
-//     const data = await fetchWeather(city);
-//     const weather = new WeatherData(data.current.condition.text, data.current.temp_c, data.current.feelslike_f, data.current.wind_kph)
-//     return weather;
-// }

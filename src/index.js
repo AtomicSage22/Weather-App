@@ -59,7 +59,7 @@ async function updateWeather(city, unit){
 }
 
 navigator.geolocation.getCurrentPosition(async (result) =>{
-    const location = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${result.coords.latitude}&lon=${result.coords.longitude}&limit=2&appid=eb7481b569caea24412ac6a99018b5bc`);
+    const location = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${result.coords.latitude}&lon=${result.coords.longitude}&limit=2&appid=eb7481b569caea24412ac6a99018b5bc`);
     const locationData = await location.json();
     city = locationData[0].name;
     updateWeather(city, unit);

@@ -17,8 +17,12 @@ let unit = true;
 let city = "bhopal"
 
 async function updateWeather(city, unit){
+    
     const data = (await fetchWeather(city, unit));
-    console.log(data.date);
+    if(data == "Error"){
+        alert("Enter Valid City");
+        return
+    }
     day.textContent = `${data.day},`;
     date.textContent = data.date;
     temperature.textContent = data.temp;  

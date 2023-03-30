@@ -1,7 +1,9 @@
 export const fetchWeather = async (city, unit) =>{
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3cbf4f7a5dac4b9cacb43804232403&q=${city}`)
     const data = await response.json()
-    console.log(data);
+    if(data.hasOwnProperty("error")){
+        return "Error";
+    }
     const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const date = new Date(data.location.localtime);
@@ -34,4 +36,5 @@ export const fetchWeather = async (city, unit) =>{
         }
     }
 }
+
 

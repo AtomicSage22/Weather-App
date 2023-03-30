@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <video src="assets/sunny-clouds.mp4" autoplay loop muted></video>
+    <video src="assets/snowy.mp4" autoplay loop muted></video>
     <main>
         <div class="weather-content">
             <div class="glass">
@@ -17,27 +17,29 @@
                         <form name="search">
                             <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
                         </form>
-                        <!-- <i class="fas fa-search"></i> -->
                         <img src="assets/search-icon.png"  alt="">
                     </div>
                 </nav>
                 <div class="glass-info">
-                    <img src="assets/rainy.png" alt="">
-                    <p class="temp">45°C</p>
+                    <img class="icon" src="assets/rainy.png" alt="">
+                    <p class="temp"></p>
                 </div>
             </div>
             <div class="data">
                 <div class="primary-data">
-                    <p class="date">Thu,<br> 28 March</p>
+                    <div class="time">
+                        <p class="day"><p>
+                        <p class="date"></p>
+                    </div>
                     <div class="secondary-info">
-                        <p>Precipitation</p>
-                        <p>Humidity</p>
-                        <p>Wind</p>
+                        <p class="precipitation">Precipitation</p>
+                        <p class="humidity">Humidity</p>
+                        <p class="wind">Wind</p>
                     </div>
                 </div>
                 <div class="location">
-                    <h1>Bhopal</h1>
-                    <h2>India</h2>
+                    <h1 class="city"></h1>
+                    <h2 class="country"></h2>
                 </div>
             </div>
         </div>

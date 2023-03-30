@@ -55,6 +55,10 @@ body{
     font-size: 4rem;
 }
 
+.temp:hover{
+    cursor: pointer;
+}
+
 video{
     position: absolute;
     top: 0;

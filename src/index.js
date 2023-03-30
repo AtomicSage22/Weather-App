@@ -10,8 +10,11 @@ const day = document.querySelector(".day");
 const date = document.querySelector(".date");
 const weatherIcon = document.querySelector(".icon");
 const background = document.querySelector("video");
+const searchForm = document.querySelector(".search");
+const searchBox = document.querySelector("input");
 
 let unit = true;
+let city = "bhopal"
 
 async function updateWeather(city, unit){
     const data = (await fetchWeather(city, unit));
@@ -50,5 +53,11 @@ async function updateWeather(city, unit){
     }
 
 }
-updateWeather("bhopal", unit);
+updateWeather(city, unit);
 
+searchForm.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    console.log("meow")
+    updateWeather(searchBox.value, unit);
+    searchBox.value = "";
+})

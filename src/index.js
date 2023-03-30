@@ -61,7 +61,6 @@ updateWeather(city, unit);
 
 searchForm.addEventListener("submit", (e) =>{
     e.preventDefault();
-    console.log("meow")
     city = searchBox.value;
     updateWeather(city, unit);
     searchBox.value = "";
@@ -70,5 +69,4 @@ searchForm.addEventListener("submit", (e) =>{
 temperature.addEventListener("click", () =>{
     unit = !unit;
     updateWeather(city, unit);
-    
 } )
